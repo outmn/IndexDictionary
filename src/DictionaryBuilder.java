@@ -11,10 +11,10 @@ import java.util.TreeMap;
  */
 public class DictionaryBuilder {
 
-    TreeMap<String, Integer> dictionary;
+    TreeMap<String, TreeMap<String, Integer>> dictionary;
     File[] files;
 
-    public DictionaryBuilder(TreeMap<String, Integer> dictionary, File[] files) {
+    public DictionaryBuilder(TreeMap<String, TreeMap<String, Integer>> dictionary, File[] files) {
         this.dictionary = dictionary;
         this.files = files;
     }
@@ -37,7 +37,7 @@ public class DictionaryBuilder {
                         while(tz.hasMoreTokens()) {
                             word = tz.nextToken();
                             wordsCount += countWordsInList(word);
-                            dictionary.put(word, wordsCount);
+                            //dictionary.put(word, wordsCount);
                             allWordsCounter += wordsCount;
 
                         }

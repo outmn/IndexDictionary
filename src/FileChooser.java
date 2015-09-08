@@ -16,7 +16,7 @@ public class FileChooser extends JFrame implements ActionListener {
     JFileChooser fileChoser;
     JScrollPane scroll;
 
-    public File[] files;
+    public static File[] files;
 
     public FileChooser(){
         super("FileChooserApp");
@@ -88,10 +88,10 @@ public class FileChooser extends JFrame implements ActionListener {
                 files = fileChoser.getSelectedFiles();
                 textArea.setCaretPosition(textArea.getDocument().getLength());
 
-//                for (int i = 0; i < files.length; i++) {
-//                    System.out.println(files[i].getName());
-//                    textArea.append(i+1 + ". " + files[i].getName()+ ";" + '\n');
-//                }
+                for (int i = 0; i < files.length; i++) {
+                    System.out.println(files[i].getName());
+                    textArea.append(i+1 + ". " + files[i].getName()+ ";" + '\n');
+                }
 
 
 
