@@ -21,7 +21,7 @@ public class FileChooser extends JFrame implements ActionListener {
     public FileChooser(){
         super("FileChooserApp");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(600,500);
+        this.setSize(600, 500);
         initPanel();
         add(panel1);
         setVisible(true);

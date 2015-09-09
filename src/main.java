@@ -4,37 +4,18 @@ import java.util.TreeMap;
 /**
  * Created by maximgrozniy on 07.09.15.
  */
-public class main {
+public class Main {
+
+    public static FileChooser fileChooser = new FileChooser();
+
     public static void main(String[] args) throws InterruptedException {
 
-        ThreadFileChoser threadFileChoser = new ThreadFileChoser();
-        threadFileChoser.join();
-
-
-
-
-//        while(fileChooser.files == null || fileChooser.files.length == 0);
-
-        System.out.println("Новый вывод!");
-
-        for (int i = 0; i < threadFileChoser.fileChooser.files.length; i++) {
-            System.out.println(threadFileChoser.fileChooser.files[i].getName());
-
+        while (fileChooser.files == null) {
+            System.out.println(1);
         }
 
-
-
-//        TreeMap<String, Integer> dictionary = new TreeMap<String, Integer>();
-//        File file = new File("/Users/maximgrozniy/Documents/Lermontov/Geroj_nashego_vremeni.txt") ;
-//        File files [] = {file};
-//        //DictionaryBuilder dictionaryBuilder = new DictionaryBuilder(dictionary, files);
-//
-//        for(String word : dictionary.keySet( ))
-//        {
-//            System.out.println(word);
-//        }
-
-
-
+        for (int i = 0; i < fileChooser.files.length; i++) {
+            System.out.println(fileChooser.files[i].getName());
+        }
     }
 }
