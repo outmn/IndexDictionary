@@ -4,7 +4,7 @@
 public class MainProgram {
     public static FileChooser fileChooser = new FileChooser();
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
         while (fileChooser.files == null) {
             System.out.println(1);
