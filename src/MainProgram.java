@@ -1,11 +1,7 @@
-import java.io.File;
-import java.util.TreeMap;
-
 /**
- * Created by maximgrozniy on 07.09.15.
+ * Created by maximgrozniy on 09.09.15.
  */
-public class Main {
-
+public class MainProgram {
     public static FileChooser fileChooser = new FileChooser();
 
     public static void main(String[] args) throws InterruptedException {
