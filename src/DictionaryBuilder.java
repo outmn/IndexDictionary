@@ -1,10 +1,5 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
-import java.util.TreeMap;
+import java.io.*;
+import java.util.*;
 
 public class DictionaryBuilder {
 
