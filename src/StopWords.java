@@ -1,10 +1,6 @@
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-/**
- * Created by maximgrozniy on 05.09.15.
- */
 public class StopWords {
     private static List<String> words = new ArrayList<String>();
 
@@ -41,5 +37,4 @@ public class StopWords {
         }
         return res;
     }
-
 }

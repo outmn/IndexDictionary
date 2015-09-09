@@ -1,14 +1,6 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
-import java.util.TreeMap;
+import java.io.*;
+import java.util.*;
 
-/**
- * Created by maximgrozniy on 08.09.15.
- */
 public class DictionaryBuilder {
 
     TreeMap<String, TreeMap<String, Integer>> dictionary;
@@ -34,18 +26,14 @@ public class DictionaryBuilder {
                 while ((strLine = br.readLine()) != null) {
                     strLine.toLowerCase();
                     tz = new StringTokenizer(strLine);
-                        while(tz.hasMoreTokens()) {
-                            word = tz.nextToken();
-                            wordsCount += countWordsInList(word);
-                            //dictionary.put(word, wordsCount);
-                            allWordsCounter += wordsCount;
 
-                        }
-
+                    while(tz.hasMoreTokens()) {
+                        word = tz.nextToken();
+                        wordsCount += countWordsInList(word);
+                        //dictionary.put(word, wordsCount);
+                        allWordsCounter += wordsCount;
+                    }
                 }
-
-
-
             } finally {
                 br.close();
             }
@@ -74,5 +62,4 @@ public class DictionaryBuilder {
 //
 //        return StopWords.removeStopWords(tokens);
 //    }
-
 }

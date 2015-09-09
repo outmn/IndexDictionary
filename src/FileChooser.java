@@ -1,13 +1,9 @@
 import javax.swing.*;
-import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.io.File;
 
-/**
- * Created by maximgrozniy on 08.09.15.
- */
 public class FileChooser extends JFrame implements ActionListener {
 
     JPanel panel1;
@@ -25,7 +21,6 @@ public class FileChooser extends JFrame implements ActionListener {
         initPanel();
         add(panel1);
         setVisible(true);
-
     }
 
     private void initPanel() {
@@ -35,7 +30,6 @@ public class FileChooser extends JFrame implements ActionListener {
             textArea = new JTextArea(20, 20);
             textArea.setEditable(false);
             scroll = new JScrollPane (textArea);
-
         }
 
         if (fileChoser==null){
@@ -59,32 +53,26 @@ public class FileChooser extends JFrame implements ActionListener {
                     // TODO Auto-generated method stub
                     return "Text files";
                 }
-
             };
-
             fileChoser.setFileFilter(filter);
-
         }
 
         if (openFileButton==null){
             openFileButton = new JButton("Open");
             openFileButton.addActionListener(this);
-
         }
-
         panel1.add(openFileButton, BorderLayout.SOUTH);
         panel1.add(scroll, BorderLayout.CENTER);
-
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
         if (e.getSource() == openFileButton) {
             fileChoser.setMultiSelectionEnabled(true);
-
             int returnValue = fileChoser.showOpenDialog(FileChooser.this);
-            if (returnValue == JFileChooser.APPROVE_OPTION) {
 
+            if (returnValue == JFileChooser.APPROVE_OPTION) {
                 files = fileChoser.getSelectedFiles();
                 textArea.setCaretPosition(textArea.getDocument().getLength());
 
@@ -92,11 +80,6 @@ public class FileChooser extends JFrame implements ActionListener {
                     System.out.println(files[i].getName());
                     textArea.append(i+1 + ". " + files[i].getName()+ ";" + '\n');
                 }
-
-
-
-
-
             }
         }
 
