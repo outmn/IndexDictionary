@@ -77,7 +77,7 @@ public class FileChooser extends JFrame implements ActionListener {
                 textArea.setCaretPosition(textArea.getDocument().getLength());
 
                 for (int i = 0; i < files.length; i++) {
-                    System.out.println(files[i].getName());
+                    //System.out.println(files[i].getName());
                     textArea.append(i+1 + ". " + files[i].getName()+ ";" + '\n');
                 }
             }
